@@ -5,9 +5,9 @@ import mysql.connector
 app = Flask(__name__)
 app = Flask(__name__,static_folder='static/css',static_url_path='')
 db = mysql.connector.connect(
-    host='localhost',
+    host='username.mysql.pythonanywhere-services.com',
     user='vimalprakash404',
-    password='root1234',
+    password='host1234',
     database='vimalprakash404$ICT_EMPLOYEE'
 )
 
