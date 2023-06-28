@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website - About</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <img src="{{ url_for('static', filename='asset/logo.png') }}" alt="Logo">
+    <h1>ICT Academy</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Login</a></li>
+        <li><a href="about" class="active">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>About Page</h2>
+    <p>Welcome to the ICT Academy Employee Management website! This platform has been specifically developed to cater to the unique needs of the ICT Academy, enabling efficient management of employees in a centralized online environment. As the ICT Academy continues to grow and expand, it becomes increasingly important to have a reliable system in place for handling employee information. Our website provides a comprehensive set of features to effectively manage and organize employee records, including their names, departments, and salaries. Whether you need to add new employees, update existing records, search for specific individuals, or even delete employee information, our user-friendly interface ensures a seamless experience. By utilizing this website, the ICT Academy can streamline its employee management process, enhancing productivity and facilitating smooth operations.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

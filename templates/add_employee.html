@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website - Add Employee</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <img src="{{ url_for('static', filename='asset/logo.png') }}" alt="Logo">
+    <h1>ICT Academy</h1>
+    <nav>
+      <ul>
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="/addstaff"  class="active">Add Staff</a></li>
+        <li><a href="/search">search staff</a></li>
+        <li><a href="/">logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Add Staff</h2>
+
+    <div class="card">
+      <form action="{{ url_for('add_employee') }}" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="department">Department</label>
+          <input type="text" id="department" name="department" required>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary</label>
+          <input type="text" id="salary" name="salary" required>
+        </div>
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

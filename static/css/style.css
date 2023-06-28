@@ -1,0 +1,142 @@
+header img {
+    width: 10%;
+    height: auto;
+    margin-right: 10px;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #437FC7;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* style.css */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #6DAFFE;
+    border-radius: 4px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #437FC7;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    background-color: #437FC7;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #437FC7;
+    color: #fff;
+  }
+  
+  table tr:hover {
+    background-color: #F0F0F0;
+  }  
+
+  .abutton{
+    background-color: #437FC7;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+  }

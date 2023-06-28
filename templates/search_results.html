@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website - Search Results</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <img src="{{ url_for('static', filename='asset/logo.png') }}" alt="Logo">
+    <h1>ICT Academy</h1>
+    <nav>
+      <ul>
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="/add_employee" >Add Staff</a></li>
+        <li><a href="/search" class="active">search</a></li>
+        <li><a href="/">logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h3>Search Results</h3>
+  <p>Search query: {{ search_query }}</p>
+  <p>Search type: {{ search_type }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for employee in employees %}
+      <tr>
+        <td>{{ employee[0] }}</td>
+        <td>{{ employee[1] }}</td>
+        <td>{{ employee[2] }}</td>
+        <td>{{ employee[3] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+</body>
+
+
+
+  
+
