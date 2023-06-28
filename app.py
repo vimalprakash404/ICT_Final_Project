@@ -29,19 +29,18 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        # Add your login logic here
-        # Example: Check if the username and password are valid
+       
 
         if username == 'admin' and password == 'admin123':
-            # Redirect to a success page
+            
             return redirect('/dashboard')
         else:
-            # Redirect to a failure page
-            error_message = 'Invalid username or password'  # Error message for failed login
+            
+            error_message = 'Invalid username or password'  
 
             return render_template('login.html', error_message=error_message)
 
-    # Render the login page for GET request
+   
     return render_template('login.html')
 @app.route('/dashboard')
 def dashboard():
@@ -57,21 +56,19 @@ def add_employee():
         department = request.form.get('department')
         salary = request.form.get('salary')
 
-        # Add your code to insert the new employee into the database
-        # Example: Use SQL query to insert the data
+        
         cursor = db.cursor()
         query = "INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)"
         cursor.execute(query, (name, department, salary))
         db.commit()
 
-        return redirect('/dashboard')  # Redirect to the employee dashboard after adding the employee
+        return redirect('/dashboard')  
 
     return render_template('add_employee.html')
 
 @app.route('/delete_employee/<employee_id>')
 def delete_employee(employee_id):
-    # Add your code to delete the employee from the database
-    # Example: Use SQL query to delete the employee based on the provided employee_id
+    
     cursor = db.cursor()
     query = "DELETE FROM employees WHERE id = %s"
     cursor.execute(query, (employee_id,))
@@ -87,15 +84,14 @@ def edit_employee(employee_id):
         department = request.form.get('department')
         salary = request.form.get('salary')
 
-        # Add your code to update the employee in the database
-        # Example: Use SQL query to update the data
+        
         query = "UPDATE employees SET name = %s, department = %s, salary = %s WHERE id = %s"
         cursor.execute(query, (name, department, salary, employee_id))
         db.commit()
 
-        return redirect('/dashboard')  # Redirect to the employee dashboard after updating the employee
+        return redirect('/dashboard')  
     else:
-        # Fetch the employee data from the database
+        
         query = "SELECT * FROM employees WHERE id = %s"
         cursor.execute(query, (employee_id,))
         employee = cursor.fetchone()
@@ -107,7 +103,7 @@ def search():
         search_query = request.form.get('search_query')
         search_type = request.form.get('search_type')
 
-        # Add your code to search for employees in the database based on the search type
+        
         cursor = db.cursor()
         query = "SELECT * FROM employees WHERE {} LIKE %s".format(search_type)
         cursor.execute(query, ('%' + search_query + '%',))
